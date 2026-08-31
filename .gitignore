@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+
+# Real captured reservation data (used by "replay" mode) - contains real
+# booking activity, not something to publish to a public GitHub repo.
+capture/
+
+# index.html is intentionally NOT listed here - it's the published page,
+# tracked and pushed to GitHub Pages on purpose (see main.py).

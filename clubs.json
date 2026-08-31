@@ -1,0 +1,83 @@
+{
+  "clubs": [
+    {
+      "id": "swcptc",
+      "name": "Sir Winston Churchill Tennis Club",
+      "system": "court_reserve",
+      "mode": "live",
+      "court_reserve": {
+        "org_id": "6817",
+        "login_url": "https://app.courtreserve.com/Online/Account/LogIn/6817",
+        "scheduler_page_urls": [
+          "https://app.courtreserve.com/Online/Reservations/Bookings/6817?sId=851",
+          "https://app.courtreserve.com/Online/Reservations/Bookings/6817?sId=852"
+        ],
+        "note": "Confirmed by Taylor. Courts 1-5 (sId=851) and 6-10 (sId=852) are two separate schedulers, merged by the adapter."
+      },
+      "courts": [
+        {"number": 1, "slot_minutes": 30},
+        {"number": 2, "slot_minutes": 30},
+        {"number": 3, "slot_minutes": 30},
+        {"number": 4, "slot_minutes": 30},
+        {"number": 5, "slot_minutes": 30},
+        {"number": 6, "slot_minutes": 60},
+        {"number": 7, "slot_minutes": 60},
+        {"number": 8, "slot_minutes": 60},
+        {"number": 9, "slot_minutes": 60},
+        {"number": 10, "slot_minutes": 60}
+      ]
+    },
+    {
+      "id": "old_mill",
+      "name": "Old Mill",
+      "system": "court_reserve",
+      "mode": "live",
+      "court_reserve": {
+        "org_id": "16627",
+        "login_url": "https://app.courtreserve.com/Online/Account/LogIn/16627",
+        "scheduler_page_urls": ["https://app.courtreserve.com/Online/Reservations/Bookings/16627?sId=21330"],
+        "note": "Confirmed by Taylor. scheduler_page_urls only used when mode is \"live\"."
+      },
+      "courts": [
+        {"number": 1, "slot_minutes": 60},
+        {"number": 2, "slot_minutes": 60},
+        {"number": 3, "slot_minutes": 60},
+        {"number": 4, "slot_minutes": 60}
+      ]
+    },
+    {
+      "id": "mimico",
+      "name": "Mimico",
+      "system": "court_reserve",
+      "mode": "live",
+      "court_reserve": {
+        "org_id": "6034",
+        "login_url": "https://app.courtreserve.com/Online/Account/LogIn/6034",
+        "scheduler_page_urls": ["https://app.courtreserve.com/Online/Reservations/Index/6034"],
+        "note": "Confirmed by Taylor. No sId param (unlike Old Mill's) - Mimico likely just has a single scheduler."
+      },
+      "courts": [
+        {"number": 1, "slot_minutes": 60, "surface": "clay"},
+        {"number": 2, "slot_minutes": 60, "surface": "clay"},
+        {"number": 3, "slot_minutes": 60, "surface": "clay"}
+      ]
+    },
+    {
+      "id": "10xto",
+      "name": "10XTO",
+      "system": "club_automation",
+      "mode": "mock",
+      "club_automation": {
+        "subdomain": "10xtoronto",
+        "base_url": "https://10xtoronto.clubautomation.com/",
+        "note": "Confirmed via web search + Google Play package name com.clubautomation.xto."
+      },
+      "courts": [
+        {"number": 1, "slot_minutes": 60, "indoor": true},
+        {"number": 2, "slot_minutes": 60, "indoor": true},
+        {"number": 3, "slot_minutes": 60, "indoor": true},
+        {"number": 4, "slot_minutes": 60, "indoor": true}
+      ]
+    }
+  ]
+}
