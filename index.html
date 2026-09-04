@@ -7,6 +7,16 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="apple-touch-icon.png">
 <style>
+  /* Border-box everywhere: without this, a declared height (like the
+     grid rows' 32px on mobile) doesn't include the 1px border-bottom,
+     so the browser has to round two separate numbers (height, then
+     height+border) per row instead of one - on mobile Safari that can
+     round slightly differently row to row, drifting the time column
+     out of sync with the court columns over 32 stacked rows. Border-box
+     makes "height: 32px" mean the FULL box including its border, so
+     every row is one exact, consistent number. */
+  * { box-sizing: border-box; }
+
   body { font-family: -apple-system, Segoe UI, sans-serif; margin: 0; padding: 24px;
           background: #f7f7f5; color: #1a1a1a; }
   h1 { font-size: 20px; margin: 0 0 4px; }
@@ -99,7 +109,7 @@
   <div class="titlebar">
     <div>
       <h1>Court Availability — All Clubs</h1>
-      <p class="sub">Sir Winston Churchill · Old Mill · Mimico · 10XTO — generated Fri Sep 4, 10:35 AM</p>
+      <p class="sub">Sir Winston Churchill · Old Mill · Mimico · 10XTO — generated Fri Sep 4, 10:43 AM</p>
     </div>
     <button class="reload-btn" onclick="location.href = location.pathname + '?t=' + Date.now()">&#8635; Reload</button>
   </div>
